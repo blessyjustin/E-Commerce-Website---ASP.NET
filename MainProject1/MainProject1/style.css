@@ -1,0 +1,253 @@
+﻿
+.form-group {
+    margin-bottom: 20px;
+}
+
+    .form-group label {
+        display: block;
+        margin-bottom: 7px;
+        font-size: 13px;
+        font-weight: 600;
+        color: #2a2a2a;
+    }
+
+    .form-group input[type="text"],
+    .form-group input[type="password"],
+    .form-group textarea {
+        width: 100%;
+        height: 45px;
+        box-sizing: border-box;
+        padding: 0 14px;
+        border: 1px solid #ddd;
+        outline: none;
+        background-color: #fff;
+        color: #333;
+        font-family: 'Poppins', sans-serif;
+        font-size: 13px;
+        transition: border-color 0.3s ease;
+    }
+
+        .form-group input[type="text"]:focus,
+        .form-group input[type="password"]:focus,
+        .form-group textarea:focus {
+            border-color: #2a2a2a;
+        }
+
+    .form-group textarea {
+        height: 90px;
+        padding-top: 12px;
+        resize: vertical;
+    }
+
+
+.simple-header {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px 0;
+    box-sizing: border-box;
+    background-color: #fff;
+    border-bottom: 1px solid #eee;
+}
+
+    .simple-header img {
+        width: 280px;
+        max-height: 170px;
+        height: auto !important;
+        object-fit: contain;
+        display: block;
+    }
+
+.shop-logo {
+    width: 220px;
+    height:auto;
+    display: block;
+    margin-top:2px;
+}
+
+.register-container,
+.login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 70px 20px;
+    background-color: #f8f8f8;
+    font-family: 'Poppins', sans-serif;
+}
+
+.register-container {
+    min-height: 750px;
+}
+
+.login-container {
+    min-height: 650px;
+}
+
+.cart-icon {
+    position: relative;
+    display: inline-block;
+}
+
+.cart-count {
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    background-color: red;
+    color: white;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    font-size: 11px;
+}
+
+.register-card,
+.login-card {
+    background-color: #fff;
+    padding: 45px 50px;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.08);
+}
+
+.register-card {
+    width: 600px;
+}
+
+.login-card {
+    width: 500px;
+}
+
+    .register-card h2,
+    .login-card h2 {
+        margin: 0 0 8px;
+        text-align: center;
+        font-size: 28px;
+        font-weight: 700;
+        color: #2a2a2a;
+    }
+
+    .register-card > p,
+    .login-card > p {
+        margin-bottom: 35px;
+        text-align: center;
+        color: #777;
+        font-size: 14px;
+    }
+
+
+.gender-list {
+    margin-top: 8px;
+}
+
+    .gender-list td {
+        padding-right: 25px;
+        color: #777;
+        font-size: 13px;
+    }
+
+    .gender-list input[type="radio"] {
+        margin-right: 5px;
+    }
+
+
+.register-button,
+.login-button {
+    width: 100%;
+    height: 48px;
+    margin-top: 5px;
+    border: none;
+    background-color: #2a2a2a;
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+    .register-button:hover,
+    .login-button:hover {
+        background-color: #555;
+    }
+
+
+.error-message,
+.login-error {
+    display: block;
+    color: #e74c3c;
+    font-size: 12px;
+}
+
+.error-message {
+    margin-top: 5px;
+}
+
+.login-error {
+    margin-top: 15px;
+    text-align: center;
+}
+
+.success-message {
+    display: block;
+    margin-top: 15px;
+    text-align: center;
+    color: #28a745;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+
+
+.login-link,
+.register-link {
+    margin-top: 25px;
+    text-align: center;
+    color: #777;
+    font-size: 13px;
+}
+
+.login-link a,
+.register-link a {
+    color: #2a2a2a;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.login-link a:hover,
+.register-link a:hover {
+    text-decoration: underline;
+}
+
+/*Responsive*/
+
+@media (max-width: 650px) {
+
+    .register-container,
+    .login-container {
+        padding: 40px 15px;
+    }
+
+    .register-card,
+    .login-card {
+        width: 100%;
+        padding: 35px 25px;
+    }
+
+        .register-card h2,
+        .login-card h2 {
+            font-size: 24px;
+        }
+
+    .simple-header {
+        height: 150px;
+    }
+
+        .simple-header img {
+            width: 220px;
+            max-height: 120px;
+        }
+}

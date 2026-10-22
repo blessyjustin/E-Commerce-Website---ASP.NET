@@ -1,0 +1,499 @@
+﻿* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', Arial, sans-serif;
+    background-color: #f7f7f7;
+    color: #222;
+}
+
+
+/* Main layout */
+
+.admin-layout {
+    display: flex;
+    min-height: 100vh;
+}
+
+
+/* Sidebar */
+
+.admin-sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    width: 250px;
+    min-height: 100vh;
+    background-color: #222;
+    color: #fff;
+}
+
+
+/* Logo */
+
+.admin-logo {
+    height: 150px;
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-bottom: 1px solid #444;
+}
+
+    .admin-logo img {
+        width: 150px;
+        max-height: 90px;
+        height: auto;
+        object-fit: contain;
+    }
+
+    .admin-logo span {
+        margin-top: 8px;
+        color: #ccc;
+        font-size: 10px;
+        letter-spacing: 2px;
+    }
+
+
+/* Navigation */
+
+.admin-menu {
+    padding: 25px 15px;
+}
+
+    .admin-menu a,
+    .admin-menu .admin-logout {
+        display: block;
+        width: 100%;
+        padding: 14px 20px;
+        margin-bottom: 5px;
+        border: none;
+        background: none;
+        color: #ddd;
+        text-decoration: none;
+        text-align: left;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-size: 13px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        cursor: pointer;
+        transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+        .admin-menu a:hover,
+        .admin-menu .admin-logout:hover,
+        .admin-menu a.active {
+            background-color: #fff;
+            color: #222;
+        }
+
+.admin-menu-divider {
+    height: 1px;
+    margin: 25px 5px;
+    background-color: #444;
+}
+
+
+/* Main content */
+
+.admin-content {
+    width: calc(100% - 250px);
+    min-height: 100vh;
+    margin-left: 250px;
+    background-color: #f7f7f7;
+}
+
+
+/* Top bar */
+
+.admin-top-title {
+    height: 70px;
+    padding: 0 40px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #fff;
+    border-bottom: 1px solid #e5e5e5;
+    color: #555;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 2px;
+}
+
+
+/* Admin page */
+
+.admin-page {
+    padding: 50px;
+}
+
+    .admin-page h1 {
+        margin: 0 0 10px;
+        color: #222;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 36px;
+        font-weight: 400;
+    }
+
+    .admin-page > p {
+        margin: 0;
+        color: #777;
+        font-size: 14px;
+    }
+
+
+/* Admin card */
+
+.admin-card {
+    margin: 45px;
+    padding: 45px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+    .admin-card h1 {
+        margin: 0 0 10px;
+        color: #222;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 34px;
+        font-weight: 400;
+    }
+
+    .admin-card p {
+        margin: 0;
+        color: #777;
+        font-size: 14px;
+    }
+
+
+/* Quick actions */
+
+.admin-actions {
+    margin-top: 40px;
+}
+
+    .admin-actions h2 {
+        margin: 0 0 20px;
+        color: #222;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 22px;
+        font-weight: 400;
+    }
+
+.admin-action-buttons {
+    display: flex;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+    .admin-action-buttons a {
+        min-width: 160px;
+        height: 48px;
+        padding: 0 22px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+        background-color: #222;
+        color: #fff;
+        text-decoration: none;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-size: 11px;
+        font-weight: 600;
+        letter-spacing: 1px;
+        transition: background-color 0.25s ease;
+    }
+
+        .admin-action-buttons a:hover {
+            background-color: #555;
+        }
+
+
+/* Admin form */
+
+.admin-form-card {
+    width: 650px;
+    max-width: 100%;
+    margin-top: 35px;
+    padding: 35px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+}
+
+.admin-form-group {
+    margin-bottom: 22px;
+}
+
+    .admin-form-group label {
+        display: block;
+        margin-bottom: 8px;
+        color: #333;
+        font-size: 12px;
+        font-weight: 600;
+    }
+
+
+    /* Form controls */
+
+    .admin-input,
+    .admin-form-control,
+    .admin-form-group input[type="text"],
+    .admin-form-group input[type="password"],
+    .admin-form-group input[type="email"],
+    .admin-form-group textarea,
+    .admin-form-group select {
+        width: 100%;
+        height: 45px;
+        padding: 0 14px;
+        border: 1px solid #ddd;
+        outline: none;
+        background-color: #fff;
+        color: #333;
+        font-family: 'Poppins', Arial, sans-serif;
+        font-size: 13px;
+        transition: border-color 0.25s ease;
+    }
+
+        .admin-input:focus,
+        .admin-form-control:focus,
+        .admin-form-group input:focus,
+        .admin-form-group textarea:focus,
+        .admin-form-group select:focus {
+            border-color: #222;
+        }
+
+
+    /* Textarea */
+
+    .admin-form-group textarea {
+        height: 100px;
+        padding: 12px 14px;
+        resize: vertical;
+    }
+
+
+    /* Dropdown */
+
+    .admin-form-group select {
+        cursor: pointer;
+    }
+
+
+/* File upload */
+
+.admin-file {
+    width: 100%;
+    height: 45px;
+    padding: 10px 12px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    color: #555;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 12px;
+    cursor: pointer;
+}
+
+
+/* Button */
+
+.admin-button {
+    min-width: 180px;
+    height: 48px;
+    padding: 0 25px;
+    border: none;
+    background-color: #222;
+    color: #fff;
+    font-family: 'Poppins', Arial, sans-serif;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: background-color 0.25s ease;
+}
+
+    .admin-button:hover {
+        background-color: #555;
+    }
+
+
+/* Messages */
+
+.admin-message {
+    display: block;
+    margin-top: 15px;
+    color: #555;
+    font-size: 12px;
+}
+
+
+/* Category management */
+
+.category-management {
+    margin-top: 40px;
+    padding: 35px;
+}
+
+    .category-management h2 {
+        margin: 0 0 8px;
+        color: #222;
+        font-family: Georgia, "Times New Roman", serif;
+        font-size: 26px;
+        font-weight: 400;
+    }
+
+    .category-management > p {
+        margin: 0 0 30px;
+        color: #888;
+        font-size: 13px;
+    }
+
+
+/* GridView */
+
+.category-table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.admin-grid {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: #fff;
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
+    .admin-grid th {
+        padding: 14px 16px;
+        border: none;
+        background-color: #222;
+        color: #fff;
+        text-align: left;
+        font-size: 10px;
+        font-weight: 600;
+        letter-spacing: 1.2px;
+    }
+
+    .admin-grid td {
+        padding: 14px 16px;
+        border-bottom: 1px solid #eee;
+        color: #333;
+        font-size: 14px;
+        vertical-align: middle;
+    }
+
+    .admin-grid tr:nth-child(even) {
+        background-color: #fafafa;
+    }
+
+    .admin-grid tr:hover {
+        background-color: #f7f3ee;
+    }
+
+
+/* Category image */
+
+.category-grid-image {
+    width: 65px;
+    height: 75px;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* GridView links */
+
+.admin-grid a {
+    margin-right: 12px;
+    color: #222;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+    .admin-grid a:hover {
+        text-decoration: underline;
+    }
+
+
+/* Subcategory grid */
+
+.subcategory-grid td {
+    vertical-align: middle;
+}
+
+    .subcategory-grid td:first-child {
+        width: 70px;
+        color: #222;
+        font-size: 14px;
+    }
+
+    .subcategory-grid td:nth-child(2) {
+        color: #222;
+        font-size: 14px;
+        font-weight: 400;
+        text-transform: capitalize;
+    }
+
+    .subcategory-grid td:nth-child(3) {
+        color: #222;
+        font-size: 14px;
+    }
+
+
+/* Responsive */
+
+@media (max-width: 900px) {
+
+    .admin-sidebar {
+        width: 210px;
+    }
+
+    .admin-content {
+        width: calc(100% - 210px);
+        margin-left: 210px;
+    }
+}
+
+@media (max-width: 700px) {
+
+    .category-management {
+        padding: 25px;
+    }
+
+    .admin-grid {
+        min-width: 650px;
+    }
+}
+
+@media (max-width: 650px) {
+
+    .admin-sidebar {
+        width: 180px;
+    }
+
+    .admin-content {
+        width: calc(100% - 180px);
+        margin-left: 180px;
+    }
+
+    .admin-page {
+        padding: 25px;
+    }
+
+    .admin-card {
+        margin: 20px;
+        padding: 25px;
+    }
+
+    .admin-form-card {
+        padding: 25px;
+    }
+}

@@ -1,0 +1,154 @@
+﻿<%@ Master Language="C#"
+    AutoEventWireup="true"
+    CodeBehind="Admin.Master.cs"
+    Inherits="MainProject1.Admin" %>
+
+<!DOCTYPE html>
+
+<html>
+
+<head runat="server">
+
+    <meta charset="utf-8" />
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0" />
+
+    <title>Novara Admin</title>
+
+   
+    <link href="admin.css" rel="stylesheet" />
+
+    <asp:ContentPlaceHolder
+        ID="head"
+        runat="server">
+    </asp:ContentPlaceHolder>
+
+</head>
+
+
+<body>
+
+<form id="form1" runat="server">
+
+    <div class="admin-layout">
+
+
+        <!-- LEFT SIDEBAR -->
+
+        <aside class="admin-sidebar">
+
+
+            <!-- LOGO -->
+
+            <div class="admin-logo">
+
+                <img src="assets/images/novara.png"
+                     alt="Novara" />
+
+                <span>ADMINISTRATION</span>
+
+            </div>
+
+
+            <!-- MENU -->
+
+            <nav class="admin-menu">
+
+            <a href="adminHome.aspx"
+               class="<%= GetActiveClass("adminHome.aspx") %>">
+                Dashboard
+            </a>
+
+            <a href="Category.aspx"
+               class="<%= GetActiveClass("Category.aspx") %>">
+                Categories
+            </a>
+
+            <a href="Subcategory.aspx"
+               class="<%= GetActiveClass("Subcategory.aspx") %>">
+                Subcategories
+            </a>
+
+            <a href="Product.aspx"
+               class="<%= GetActiveClass("Product.aspx") %>">
+                Products
+            </a>
+
+            <a href="AdminFeedback.aspx"
+               class="<%= GetActiveClass("AdminFeedback.aspx") %>">
+                FeedBack
+            </a>
+
+
+            <%--<a id="OrdersLink"
+               runat="server"
+               href="Orders.aspx">
+                Orders
+            </a>
+
+
+            <a id="UsersLink"
+               runat="server"
+               href="Users.aspx">
+                Users
+            </a>--%>
+
+
+                <div class="admin-menu-divider">
+                </div>
+
+
+                <a href="HomePage.aspx">
+
+                    View Store
+
+                </a>
+
+
+                <asp:LinkButton
+                    ID="LogoutButton"
+                    runat="server"
+                    CssClass="admin-logout" PostBackUrl="~/Login.aspx"
+                    >
+
+                    Logout
+
+                </asp:LinkButton>
+
+
+            </nav>
+
+
+        </aside>
+
+
+        <!--  RIGHT SIDE-->
+
+        <main class="admin-content">
+
+
+            <div class="admin-top-title">
+
+                STORE ADMINISTRATION
+
+            </div>
+
+
+            <asp:ContentPlaceHolder
+                ID="ContentPlaceHolder1"
+                runat="server">
+
+            </asp:ContentPlaceHolder>
+
+
+        </main>
+
+
+    </div>
+
+</form>
+
+</body>
+
+</html>
